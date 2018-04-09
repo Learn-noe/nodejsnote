@@ -1,0 +1,21 @@
+<!doctype html>
+    <html>
+        <head>
+            <title><%= title %></title>
+        </head>
+        <body>
+            <div class="nav">
+                <a href="/">首页</a>
+                <!-- 判断 如果用户存在则显示用户信息-->
+                <% if(user){ %>
+                    <!-- 打印出来用户的id-->
+                    <a href="/user/<% = user._id %>"><% = username %></a>
+                    <a href="/logout">退出</a>
+                <!--不存在的时候会显示注册页面-->
+                <% }else{ %>
+                    <a href="/login">登录</a>
+                    <a href="/reg">注册</a>
+                <% } %>
+            </div>
+        </body>
+    </html>

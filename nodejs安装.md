@@ -29,30 +29,7 @@
     express-session
     connect-mongo
     mongose
-## 路由设置
-### routers.js
-        module.export=function(app){  一个模块只能导出一个变量
-            首页
-            app.get('/',function(req,res,next){
-                res.send('');
-                res.render('index',{title:'我是xxx'}) 对应文件中的<%= title %>
-            })
-            登录页
-            app.get('/login',function(req,res,next){
-                res.send('请登录')
-                res.render('login',{title:'登录'})
-            })；
-            注册页
-            app.get('./reg',function(req,res,next){
-                res.send('注册')；
-                res.render('reg',{title:'注册'})
-            })；
-            退出页
-            app.get('./logout',function(req,res,next){
-                res.send('退出');
-                res.render('lohout',{title:'退出'})
-            })
-        }
+
 ### app.js里面设置
 #### 添加routes模块路径 var routes=require('./xxx/xxx')
 #### 接收参数   routes(app); 
